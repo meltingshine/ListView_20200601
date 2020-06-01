@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import com.example.listview_20200601.R
 import com.example.listview_20200601.datas.Student
 
@@ -22,6 +23,14 @@ class StudentAdapter(context: Context, resId: Int, list : List<Student>) : Array
             //inflate는 xml을 실제로 그려서 객체로 만드는 것
         }
         val row = tempRow!! // !! -> null이 절대 아니다 란 뜻.
+
+        val nameAndAgeTxt = row.findViewById<TextView>(R.id.nameAndAgeTxt)
+        val genderTxt = row.findViewById<TextView>(R.id.genderTxt)
+
+        val data = mList.get(position)
+        nameAndAgeTxt.text =data.name
+
+
         return row
 
     }
