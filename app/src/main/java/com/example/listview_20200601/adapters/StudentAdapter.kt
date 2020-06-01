@@ -31,6 +31,18 @@ class StudentAdapter(context: Context, resId: Int, list : List<Student>) : Array
         nameAndAgeTxt.text =data.name
 
 
+        //이름과 나이를 실제로 출력
+        // 조경진, 1988년 -> 조경진(33세)
+        // 나이 구하기 2020-출생연도+1
+
+        if (data.isMale) {
+            genderTxt.text ="남성"
+        }
+        else {
+            genderTxt.text = "여성"
+        }
+
+
         return row
 
     }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.listview_20200601.adapters.StudentAdapter
 import com.example.listview_20200601.datas.Student
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
     val students = ArrayList<Student>()
@@ -30,6 +31,7 @@ class MainActivity : BaseActivity() {
         students.add(Student("이지수",1984,false))
 
         studentAdapter = StudentAdapter(mContext,R.layout.student_list_item,students)
+        studentListView.adapter = studentAdapter
 
 
     }
