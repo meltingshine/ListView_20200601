@@ -6,7 +6,7 @@ abstract class BaseActivity : AppCompatActivity() {
     val mContext = this
     abstract fun setupEvents()
     abstract fun setValues()
-    
+
     //fun은 함수란 뜻임다
 
 }
