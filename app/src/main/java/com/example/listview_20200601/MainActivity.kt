@@ -27,12 +27,16 @@ class MainActivity : BaseActivity() {
 
         }
 
+        //position이 뜻하는건 n번째임
         studentListView.setOnItemLongClickListener { parent, view, position, id ->
-
-            val clickedStudent = students[position]
-            Toast.makeText(mContext,"${clickedStudent.name}을 오래 누름",Toast.LENGTH_SHORT).show()
+//
+//            val clickedStudent = students[position]
+//            Toast.makeText(mContext,"${clickedStudent.name}을 오래 누름",Toast.LENGTH_SHORT).show()
+            studentAdapter.notifyDataSetChanged()
+            students.removeAt(position)
             return@setOnItemLongClickListener true
             // true -> 롱클릭만 // false -> 클릭도 같이 한...다지만 걍 true임
+
 
         }
 
