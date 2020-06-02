@@ -28,8 +28,9 @@ class StudentAdapter(context: Context, resId: Int, list : List<Student>) : Array
         val genderTxt = row.findViewById<TextView>(R.id.genderTxt)
 
         val data = mList.get(position)
-//        nameAndAgeTxt.text =data.name
-          nameAndAgeTxt.text =data.nameWithAge
+////        nameAndAgeTxt.text =data.name
+//          nameAndAgeTxt.text =data.nameWithAge
+        nameAndAgeTxt.text = "${data.name}(${data.getKoreanAge(2020)}세)"
 
         //이름과 나이를 실제로 출력
         // 조경진, 1988년 -> 조경진(33세)
